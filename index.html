@@ -1,11 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+  @media (max-width: 600px) {
+    body { font-size: 18px; }
+  }
+</style>
+  <title>blog Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    
+  />
 </head>
 <body>
+
+  <!-- Header -->
+  <header class="header">
+<img src="images/logo.png" class="logo" alt="blog Logo" />
+    <nav class="nav">
+      <button class="nav-item active" onclick="setActive(this)">Home</button>
+      <div class="dropdown">
+  <button class="nav-item dropdown-btn" onclick="toggleDropdown(this)">Categories <i class="fas fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <a href="#">DESIGN</a>
+    <a href="#">DEVELOPMENT</a>
+    <a href="#">MARKETING</a>
+    <a href="#">TRAVEL</a>
+  </div>
+</div>
+
+      <button class="nav-item" onclick="setActive(this)">About Us</button>
+      <button class="nav-item" onclick="setActive(this)">Contact</button>
+      <input type="text" placeholder="Search..." class="search-bar" onfocus="clearActive()"/>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+   <h1><b>Discovering inspiring blogs and ideas</b></h1>
+  <img src="images/4traveller.png"  alt="4traveller" /> 
+<!-- Blog Section -->
+<section class="blog-section">
+ <hr>
+    <h2>Travel Blog</h2>
+    <p class="quote">Adventure awaits – pack your bags and let the world surprise you.</p>
+    <div class="author">
+      <img src="images/sakura.png" alt="Sakura" class="author-img" height="123"/>
+      </div>
   
+
+  <!-- Blog Article -->
+  <div class="blog-content">
+    <h2><strong>Adventure awaits – pack your bags and let the world surprise you.</strong></h2>
+    <p>
+      Traveling isn’t just about visiting new places; it’s about embracing the unexpected.
+      Every journey is an opportunity to step out of your comfort zone, explore unfamiliar landscapes,
+      and immerse yourself in diverse cultures. It’s the thrill of getting lost in a new city, finding hidden gems,
+      and experiencing the world from a fresh perspective.
+    </p>
+    <h3><strong>When you pack your bags, you’re not just bringing clothes</strong></h3>
+
+    <p>
+      you’re bringing an open mind, ready for surprises. Whether it's a spontaneous detour, a chance encounter
+      with a local, or discovering a breathtaking view you never saw coming, adventure lies in the unknown.
+      The world has a way of showing you something new and exciting, making every trip more memorable than the last.
+    </p>
+    <p>so, go ahead ,pack your bags , and let the world surprise you with its beauty,its challenges,and its unique wonders.the adventure is waiting ,and it's yours to find.</p>
+  </div>
+</section>
+<hr>
+<!-- categories -->
+ <div class="categories">
+  <h3>CATEGORIES</h3>
+  <button type="button">DESIGN</button>
+  <button type="button">DEVELOPMENT</button>
+  <button type="button">MARKETING</button>
+  <button type="button">TRAVEL</button>
+ </div> 
+<hr>
+<!--RECENT BLOGS -->
+<hr>
+<section class="recent-blogs">
+  <h2>Recent Blogs</h2>
+  <div class="blog-cards">
+
+    <!-- Blog Card 1 -->
+    <a href="design-blog.html" class="blog-card">
+      <div class="card-img">
+        <img src="images/blog1.png" alt="UX Review" />
+      </div>
+      <div class="card-content">
+        <span class="category">Design</span>
+        <h3 class="blog-title">UX Review Presentations <i class="fas fa-arrow-up-right-from-square"></i></h3>
+        <p class="blog-desc">How can you craft impactful presentations that engage your colleagues and leave a lasting impression on your manager?</p>
+        <div class="blog-footer">
+          <div class="author-info">
+            <img src="images/kathy.png" alt="Author" class="author-pic" />
+            <div>
+              <strong>Kathy Ruth</strong><br>
+              <span class="date">Jun 22, 2024</span>
+            </div>
+          </div>
+          <button class="read-btn">Read Blogs…</button>
+        </div>
+      </div>
+    </a>
+    <!-- blog card 2 -->
+<a href="design-blog.html" class="blog-card">
+      <div class="card-img">
+        <img src="images/blog2.png" alt="UX Review" />
+      </div>
+      <div class="card-content">
+        <span class="category">Product</span>
+        <h3 class="blog-title">Migrating to linear 101 <i class="fas fa-arrow-up-right-from-square"></i></h3>
+        <p class="blog-desc">The rise of RESTful APIs has been met by a rise in tools for creating,testing, and managing them.</p>
+        <div class="blog-footer">
+          <div class="author-info">
+            <img src="images/kathy.png" alt="Author" class="author-pic" />
+            <div>
+              <strong>John</strong><br>
+              <span class="date">Jan 17, 2024</span>
+            </div>
+          </div>
+          <button class="read-btn">Read Blogs…</button>
+        </div>
+      </div>
+    </a>
+<!-- blog card 3 -->
+ <a href="design-blog.html" class="blog-card">
+      <div class="card-img">
+        <img src="images/blog3.png" alt="UX Review" />
+      </div>
+      <div class="card-content">
+        <span class="category">Software Engineering</span>
+        <h3 class="blog-title">Building your API Stack <i class="fas fa-arrow-up-right-from-square"></i></h3>
+        <p class="blog-desc">The rise of RESTful APIs has been met by a rise in tools for creating,testing, and managing them.</p>
+        <div class="blog-footer">
+          <div class="author-info">
+            <img src="images/roy.png" alt="Author" class="author-pic" />
+            <div>
+              <strong>Roy</strong><br>
+              <span class="date">Mar 10, 2024</span>
+            </div>
+          </div>
+          <button class="read-btn">Read Blogs…</button>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<hr>
+<!-- subscribe -->
+<div class="subscribe">
+  <h3>SUBSCRIBE FOR WEEKLY UPDATES!</h3>
+  <input type="email" id="emailInput" placeholder="Enter Email" required>
+  <button type="button" onclick="submitEmail()">SIGN UP</button>
+  <p id="confirmationMessage" class="confirmation-message"></p>
+</div>
+
+</main>
+
+  <!-- Footer -->
+  <footer class="footer">
+<a href="https://www.instagram.com" target="_blank">
+  <i class="fab fa-instagram social-icon"></i>
+</a>
+<a href="https://www.linkedin.com" target="_blank">
+    <i class="fab fa-linkedin social-icon"></i>
+</a>
+<a href="https://www.facebook.com" target="_blank">
+    <i class="fab fa-facebook social-icon"></i>
+</a>
+<a href="https://www.twitter.com" target="_blank">
+    <i class="fab fa-twitter social-icon"></i>
+    </a>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function setActive(element) {
+      const buttons = document.querySelectorAll(".nav-item");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      element.classList.add("active");
+    }
+
+    function clearActive() {
+      const buttons = document.querySelectorAll(".nav-item");
+      buttons.forEach(btn => btn.classList.remove("active"));
+    }
+    function toggleDropdown(button) {
+  // Close other nav-items
+  document.querySelectorAll(".nav-item").forEach(btn => btn.classList.remove("active"));
+
+  // Activate this button
+  button.classList.toggle("active");
+
+  // Close other dropdowns
+  document.querySelectorAll(".dropdown-content").forEach(menu => {
+    if (menu !== button.nextElementSibling) menu.style.display = "none";
+  });
+
+  // Toggle current dropdown
+  const dropdown = button.nextElementSibling;
+  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
+
+// Close dropdown if clicked outside
+document.addEventListener("click", function(e) {
+  if (!e.target.closest(".dropdown")) {
+    document.querySelectorAll(".dropdown-content").forEach(menu => menu.style.display = "none");
+    document.querySelectorAll(".dropdown-btn").forEach(btn => btn.classList.remove("active"));
+  }
+});
+function submitEmail() {
+  const emailInput = document.getElementById("emailInput");
+  const message = document.getElementById("confirmationMessage");
+
+  if (emailInput.value.trim() === "") {
+    message.textContent = "Please enter a valid email.";
+    message.style.color = "red";
+  } else {
+    message.textContent = "You have been signed up.";
+    message.style.color = "green";
+    emailInput.value = ""; // Clear input
+  }
+}
+
+  </script>
 </body>
 </html>
