@@ -419,3 +419,102 @@ body {
   color: #000;
   transform: scale(1.2);
 }
+/* Container to hold the cards in a row */
+.blog-cards {
+  display: flex;
+  gap: 0; /* Remove default spacing */
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+/* Blog card styles */
+.blog-card {
+  background-color: #f9fbff;
+  border: 1px solid #d4e1ff;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  min-width: 300px;
+  margin-left: -100px; /* creates the overlapping effect */
+  padding: 20px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+}
+
+/* When you hover: bring it to front */
+.blog-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  z-index: 5;
+}
+
+/* First card should not overlap */
+.blog-card:first-child {
+  margin-left: 0;
+}
+
+/* Image inside card */
+.card-img img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Card content styling */
+.card-content {
+  margin-top: 15px;
+}
+
+.card-content .category {
+  color: gray;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.blog-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.blog-desc {
+  color: #555;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.author-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.read-btn {
+  background-color: #e6f0ff;
+  border: 1px solid #007bff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.read-btn:hover {
+  background-color: #d0e3ff;
+}
